@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Email Roadrunner | Email Access and Account Guide</title>
+  <meta name="description" content="Learn about email access, inbox management, account settings, troubleshooting options, and safer email practices with this practical guide.">
+
+  <style>
+    :root {
+      --navy: #14263d;
+      --blue: #3674e8;
+      --teal: #39d6c2;
+      --light: #f4f7fc;
+      --text: #26374c;
+      --muted: #66758a;
+      --white: #ffffff;
+      --border: #e1e8f1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1160px;
+      margin: auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .navigation {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .logo span,
+    .footer-logo span {
+      color: var(--teal);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #dce7f5;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #10253a;
+      background: var(--teal);
+    }
+
+    .button-light {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 15%, rgba(57,214,194,.2), transparent 30%),
+        linear-gradient(130deg, #14263d, #235783);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border: 1px solid rgba(57,214,194,.4);
+      border-radius: 30px;
+      color: #9af4e8;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 23px;
+      font-size: clamp(38px, 5vw, 57px);
+      line-height: 1.12;
+      letter-spacing: -1.4px;
+    }
+
+    h1 span {
+      color: var(--teal);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin-bottom: 28px;
+      color: #dce7f5;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-note {
+      margin-top: 19px;
+      color: #c8d9e9;
+      font-size: 12px;
+    }
+
+    .access-panel {
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: 22px;
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 22px 55px rgba(0,0,0,.15);
+    }
+
+    .panel-icon {
+      display: grid;
+      width: 64px;
+      height: 64px;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 18px;
+      background: rgba(57,214,194,.16);
+      color: #9af4e8;
+      font-size: 32px;
+    }
+
+    .access-panel h2 {
+      margin-bottom: 13px;
+      font-size: 27px;
+      line-height: 1.3;
+    }
+
+    .access-panel p {
+      color: #dce7f5;
+      font-size: 14px;
+    }
+
+    .panel-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .panel-list div {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #eef6ff;
+      font-size: 13px;
+    }
+
+    .check {
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 43px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2,
+    .content h2 {
+      margin: 12px 0 16px;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 39px);
+      line-height: 1.25;
+    }
+
+    .section-heading p,
+    .content p {
+      color: var(--muted);
+    }
+
+    .intro {
+      background: var(--white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .visual-card {
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #e5f0ff, #d8f5f0);
+    }
+
+    .mail-preview {
+      width: 100%;
+      max-width: 360px;
+      padding: 24px;
+      border: 1px solid #e5ebf3;
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: 0 18px 45px rgba(20,38,61,.12);
+    }
+
+    .mail-preview-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .mail-preview-top h3 {
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .mail-count {
+      padding: 4px 9px;
+      border-radius: 20px;
+      background: #e3f9f5;
+      color: #087f74;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .message {
+      display: flex;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #edf1f6;
+    }
+
+    .message:last-child {
+      border-bottom: 0;
+    }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8efff;
+      color: #3674e8;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .message-lines {
+      flex: 1;
+    }
+
+    .message-lines div {
+      height: 8px;
+      margin: 5px 0;
+      border-radius: 8px;
+      background: #e9eef5;
+    }
+
+    .message-lines .short {
+      width: 60%;
+    }
+
+    .content p {
+      margin-bottom: 18px;
+    }
+
+    .keyword-link {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .keyword-link:hover {
+      color: #164ca8;
+    }
+
+    .info-note {
+      margin-top: 23px;
+      padding: 19px;
+      border-left: 4px solid var(--teal);
+      border-radius: 0 10px 10px 0;
+      background: #eaf9f6;
+      color: #28535b;
+      font-size: 14px;
+    }
+
+    .services {
+      background: var(--light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .service-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--white);
+      transition: .2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(20,38,61,.08);
+    }
+
+    .service-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: #e9f1ff;
+      color: var(--blue);
+      font-size: 23px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .security {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .security .section-heading h2 {
+      color: var(--white);
+    }
+
+    .security .section-heading p {
+      color: #d0deeb;
+    }
+
+    .security .section-label {
+      color: var(--teal);
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .security-card {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 16px;
+      background: rgba(255,255,255,.06);
+    }
+
+    .security-number {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .security-card h3 {
+      margin: 13px 0 10px;
+      font-size: 20px;
+    }
+
+    .security-card p {
+      color: #d0deeb;
+      font-size: 14px;
+    }
+
+    .troubleshooting {
+      background: var(--white);
+    }
+
+    .troubleshooting-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 23px;
+    }
+
+    .trouble-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfcff;
+    }
+
+    .trouble-card h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .trouble-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq {
+      background: var(--light);
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      padding: 23px 0;
+      border-bottom: 1px solid #dfe7f0;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .closing {
+      padding-top: 0;
+      background: var(--light);
+    }
+
+    .closing-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 39px;
+      border-radius: 22px;
+      background: linear-gradient(120deg, #e2f8f3, #e7efff);
+    }
+
+    .closing-box h2 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 28px;
+    }
+
+    .closing-box p {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer {
+      padding: 32px 0;
+      background: #0b1728;
+      color: #c8d5e5;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .footer-logo {
+      color: var(--white);
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .footer-content p {
+      font-size: 12px;
+    }
+
+    .footer-content a.external-link {
+      color: var(--teal);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navigation {
+        min-height: 72px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .navigation > .button {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 58px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .access-panel {
+        padding: 25px;
+      }
+
+      .service-grid,
+      .security-grid,
+      .troubleshooting-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .closing-box,
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .closing-box {
+        padding: 27px;
+      }
+
+      .visual-card {
+        min-height: 290px;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navigation">
+    <a href="#home" class="logo">Mail<span>Compass</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#services">Email Tools</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+
+    <!-- Only one login button appears on the page -->
+    <a class="button button-primary"
+       href="https://www.roadrunneremail-rr.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Roadrunner Login ↗
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">Your everyday email resource</span>
+
+        <h1>Make Email Management <span>More Convenient</span></h1>
+
+        <p class="hero-copy">
+          Managing digital messages becomes easier when you understand
+          your inbox, account preferences, and available troubleshooting
+          options. Discover useful information for handling email
+          communication and maintaining a more organised mailbox.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-light" href="#overview">
+            Discover Email Tips
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Always verify a website before entering private account information.
+        </p>
+      </div>
+
+      <div class="access-panel">
+        <div class="panel-icon" aria-hidden="true">✉</div>
+
+        <h2>A Better Way to Manage Your Inbox</h2>
+
+        <p>
+          Explore practical ideas for account access, message organisation,
+          email settings, and online safety in one convenient guide.
+        </p>
+
+        <div class="panel-list">
+          <div>
+            <span class="check">✓</span>
+            <span>Understand basic account options</span>
+          </div>
+
+          <div>
+            <span class="check">✓</span>
+            <span>Learn simple inbox organisation techniques</span>
+          </div>
+
+          <div>
+            <span class="check">✓</span>
+            <span>Recognise common email security risks</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="intro" id="overview">
+    <div class="container intro-grid">
+
+      <div class="visual-card" aria-hidden="true">
+        <div class="mail-preview">
+
+          <div class="mail-preview-top">
+            <h3>Message Centre</h3>
+            <span class="mail-count">Inbox</span>
+          </div>
+
+          <div class="message">
+            <div class="avatar">A</div>
+            <div class="message-lines">
+              <div></div>
+              <div class="short"></div>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="avatar">B</div>
+            <div class="message-lines">
+              <div></div>
+              <div class="short"></div>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="avatar">C</div>
+            <div class="message-lines">
+              <div></div>
+              <div class="short"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="section-label">Email essentials</span>
+
+        <h2>Explore Your Email Management Options</h2>
+
+        <p>
+          Electronic mail remains a convenient way to receive important
+          notices, communicate with contacts, and keep track of online
+          activities. A well-organised inbox can save time and help you
+          locate useful information without unnecessary searching.
+        </p>
+
+        <p>
+          If you are researching account access, the
+          <a class="keyword-link"
+             href="https://www.roadrunneremail-rr.com/"
+             target="_blank"
+             rel="noopener noreferrer">email roadrunner</a>
+          resource may be relevant to your search. Check the destination
+          independently and confirm that it is an authorised source for
+          your particular email service before sharing any credentials.
+        </p>
+
+        <p>
+          Consider organising incoming messages into folders, removing
+          unwanted subscriptions, and reviewing your account preferences
+          periodically. These simple habits can make everyday communication
+          more manageable on both desktop and mobile devices.
+        </p>
+
+        <div class="info-note">
+          <strong>Account awareness:</strong> Do not provide passwords,
+          recovery codes, or payment details to an unfamiliar website
+          or an unexpected email request.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">Useful email features</span>
+        <h2>Tools for a More Organised Mailbox</h2>
+        <p>
+          A few everyday email habits can make messages easier to manage
+          and help you spend less time looking for important information.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⌕</div>
+          <h3>Search Old Messages</h3>
+          <p>
+            Search using a sender name, subject phrase, or relevant word
+            to locate previous conversations and useful attachments.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">▣</div>
+          <h3>Create Useful Folders</h3>
+          <p>
+            Separate work messages, personal conversations, receipts,
+            and newsletters so that different types of information
+            remain easier to find.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">↻</div>
+          <h3>Refresh Your Inbox</h3>
+          <p>
+            If new messages are not appearing, check your internet
+            connection, refresh the mailbox, and review any service
+            notifications that may be available.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⚙</div>
+          <h3>Review Account Preferences</h3>
+          <p>
+            Check available notification, display, and message-handling
+            options to make your email experience more suitable for
+            your daily routine.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⌑</div>
+          <h3>Check Unwanted Mail</h3>
+          <p>
+            Review junk and spam folders when an expected message is
+            missing. Check filters and blocked sender settings as well.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⇧</div>
+          <h3>Manage Attachments</h3>
+          <p>
+            Download files only when the sender and message are
+            trustworthy. Keep important documents organised and
+            remove unnecessary copies when appropriate.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="security" id="security">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">Protect your information</span>
+        <h2>Build Safer Email Habits</h2>
+        <p>
+          Good security practices help reduce the risk of account misuse,
+          suspicious access, and unwanted exposure of personal information.
+        </p>
+      </div>
+
+      <div class="security-grid">
+
+        <article class="security-card">
+          <span class="security-number">01 / PASSWORDS</span>
+          <h3>Choose Strong Credentials</h3>
+          <p>
+            Use a long, unique password for your email account.
+            Avoid reusing credentials across multiple websites,
+            especially for accounts containing private information.
+          </p>
+        </article>
+
+        <article class="security-card">
+          <span class="security-number">02 / MESSAGES</span>
+          <h3>Inspect Unexpected Emails</h3>
+          <p>
+            Be cautious of urgent requests, unusual attachments,
+            unfamiliar links, and messages claiming that immediate
+            account verification is required.
+          </p>
+        </article>
+
+        <article class="security-card">
+          <span class="security-number">03 / DEVICES</span>
+          <h3>Keep Your Software Updated</h3>
+          <p>
+            Install browser and operating system updates, lock
+            devices when unattended, and avoid storing sensitive
+            login information on public computers.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="troubleshooting" id="troubleshooting">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">Practical solutions</span>
+        <h2>What to Check When Email Stops Working</h2>
+        <p>
+          Start with straightforward checks before changing account
+          settings or attempting more advanced troubleshooting.
+        </p>
+      </div>
+
+      <div class="troubleshooting-grid">
+
+        <article class="trouble-card">
+          <h3>Messages Are Not Arriving</h3>
+          <p>
+            Review spam and archive folders, inspect message filters,
+            check available mailbox storage, and confirm that the
+            sender has the correct email address.
+          </p>
+        </article>
+
+        <article class="trouble-card">
+          <h3>The Account Will Not Open</h3>
+          <p>
+            Check your internet connection, confirm the web address,
+            and make sure your browser is up to date. Use only the
+            verified provider's account recovery procedure.
+          </p>
+        </article>
+
+        <article class="trouble-card">
+          <h3>Email Is Slow to Load</h3>
+          <p>
+            Try refreshing the page, closing unnecessary browser tabs,
+            or testing another updated browser. A temporary service
+            issue may also affect access.
+          </p>
+        </article>
+
+        <article class="trouble-card">
+          <h3>Messages Cannot Be Sent</h3>
+          <p>
+            Check the recipient address, attachment size, connection,
+            and any error message displayed. For persistent problems,
+            consult the email provider's verified support resources.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">Frequently asked questions</span>
+        <h2>Answers to Everyday Email Questions</h2>
+        <p>
+          Read these general explanations to better understand
+          email organisation, access, and account maintenance.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <article class="faq-item">
+          <h3>How can I keep my inbox organised?</h3>
+          <p>
+            Use folders, searchable subject lines, filters where
+            available, and regular cleanup sessions. Archive messages
+            that you want to keep but do not need to see every day.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Why does an email sometimes go to spam?</h3>
+          <p>
+            Email filters may classify a message as unwanted because
+            of its content, sender reputation, or other signals.
+            Check your spam folder and mark legitimate messages
+            appropriately when the option is available.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>What should I do if I cannot remember my password?</h3>
+          <p>
+            Use the account recovery option provided by your verified
+            email service. Follow its official instructions and never
+            send your existing password to another person.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Can I use email across different devices?</h3>
+          <p>
+            Many email services support browser access and compatible
+            mobile or desktop applications. Check your provider's
+            current setup instructions before adding an account.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>How can I recognise a suspicious email?</h3>
+          <p>
+            Look for unexpected attachments, misleading sender
+            addresses, unusual requests, and links leading to
+            unfamiliar websites. Verify important requests through
+            a separate trusted communication channel.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>When should I contact email support?</h3>
+          <p>
+            Contact the verified service provider if account recovery
+            fails, access remains unavailable, or you notice
+            unfamiliar account activity that you cannot explain.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="container">
+      <div class="closing-box">
+        <div>
+          <h2>Make Every Message Easier to Manage</h2>
+          <p>
+            Keep your inbox organised, review account settings regularly,
+            and practise safe browsing whenever you access email.
+            Reliable information and careful habits can make routine
+            communication more convenient.
+          </p>
+        </div>
+
+        <a class="button button-light" href="#overview">
+          Read the Overview
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+
+    <a class="footer-logo" href="#home">
+      Mail<span>Compass</span>
+    </a>
+
+    <p>
+      Independent informational resource.
+      <a class="external-link"
+         href="https://www.roadrunneremail-rr.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Visit the linked website ↗
+      </a>
+    </p>
+
+  </div>
+</footer>
+
+</body>
+</html>
